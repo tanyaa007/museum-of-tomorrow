@@ -1,0 +1,76 @@
+/* Keyframes and motion-only rules. Everything here is switched off for reduced motion. */
+
+@keyframes cue-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  60%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes grid-drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(72px);
+  }
+}
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes ring-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero__grid {
+  animation: grid-drift 14s linear infinite;
+}
+
+.status-dot {
+  animation: status-pulse 2.4s ease-in-out infinite;
+}
+
+.archive__rings {
+  animation: ring-spin 80s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero__grid,
+  .status-dot,
+  .archive__rings,
+  .scroll-cue__line::after {
+    animation: none !important;
+  }
+
+  .scroll-cue__line::after {
+    transform: none;
+  }
+}
