@@ -1,6 +1,8 @@
 # MUSEUM OF TOMORROW
 
 > Explore What Doesn't Exist. Yet.
+>
+> 🌐 **Live Website:** [https://tanyaa007.github.io/museum-of-tomorrow/](https://tanyaa007.github.io/museum-of-tomorrow/)
 
 An immersive, frontend-only 3D website for a fictional digital museum of speculative future inventions. Built with React, Vite, TypeScript, React Three Fiber and Framer Motion. No backend, API keys or paid services.
 
